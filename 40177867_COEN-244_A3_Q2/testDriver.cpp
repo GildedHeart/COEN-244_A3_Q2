@@ -140,8 +140,8 @@ void testCoutStreamOperatorRankTwo() {
 
 // Test input stream operator for RankOneTensor
 void testCinStreamOperatorRankOne() {
-    RankOneTensor t(1);
-    std::cout << "Enter values for RankOneTensor (size 1): ";
+    RankOneTensor t(2);
+    std::cout << "Enter values for RankOneTensor (size 2): ";
     std::cin >> t;
 
     std::cout << "RankOneTensor t: " << t << std::endl;
@@ -149,8 +149,9 @@ void testCinStreamOperatorRankOne() {
 
 // Test input stream operator for RankTwoTensor
 void testCinStreamOperatorRankTwo() {
-    RankTwoTensor t(1, 1);
-    std::cout << "Enter values for RankTwoTensor (1x1): ";
+    int d( 2 );
+    RankTwoTensor t(d, d);
+    std::cout << "Enter values for RankTwoTensor (2x2): ";
     std::cin >> t;
 
     std::cout << "RankTwoTensor t: " << t << std::endl;
