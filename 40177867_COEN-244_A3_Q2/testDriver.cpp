@@ -3,6 +3,7 @@
 #include "RankTwoTensor.h"
 #include "Utility.h"
 #include <iostream>
+#include <string>
 
 void testIncrementOperatorRankOne(); 
 void testIncrementOperatorRankTwo();
@@ -24,10 +25,6 @@ int main() {
     testIncrementOperatorRankOne();
     charLine();
     testIncrementOperatorRankTwo();
-    charLine();
-    testAddOperatorRankOne();
-    charLine();
-    testAddOperatorRankTwo();
     charLine();
     testAddOperatorRankOne();
     charLine();
@@ -82,6 +79,7 @@ void testIncrementOperatorRankTwo() {
 
 // Test addition operator for RankOneTensor
 void testAddOperatorRankOne() {
+    double scalarInput{ 0.0 };
     RankOneTensor t1(5), t2(5);
     t1.loadData();
     t2.loadData();
@@ -89,11 +87,17 @@ void testAddOperatorRankOne() {
         << "Values for RankOneTensor t2: " << t2 << std::endl;
 
     RankOneTensor t3 = t1 + t2;
-    std::cout << "RankOneTensor t3 (t1 + t2): " << t3 << std::endl;
+    std::cout << "RankOneTensor t3 (t1 + t2): " << t3 << std::endl
+        << "Input a scalar to add to the tensor:";
+    std::cin >> scalarInput;
+   
+    t3 = t3 + scalarInput;
+    std::cout << "The new values for RankOneTensor t3 + " << std::to_string(scalarInput) << ": " << t3 << std::endl;
 }
 
 // Test addition operator for RankTwoTensor
 void testAddOperatorRankTwo() {
+    double scalarInput{0.0};
     RankTwoTensor t1(3, 3), t2(3, 3);
     t1.loadData();
     t2.loadData();
@@ -101,7 +105,12 @@ void testAddOperatorRankTwo() {
         << "Values for RankTwoTensor t2: " << t2 << std::endl;
 
     RankTwoTensor t3 = t1 + t2;
-    std::cout << "RankTwoTensor t3 (t1 + t2): " << t3 << std::endl;
+    std::cout << "RankTwoTensor t3 (t1 + t2): " << t3 << std::endl
+        << "Input a scalar to add to the tensor:";
+    std::cin >> scalarInput;
+
+    t3 = t3 + scalarInput;
+    std::cout << "The new values for RankTwoTensor t3 + " << std::to_string(scalarInput) << ": " << t3 << std::endl;
 }
 
 // Test assignment operator for RankOneTensor

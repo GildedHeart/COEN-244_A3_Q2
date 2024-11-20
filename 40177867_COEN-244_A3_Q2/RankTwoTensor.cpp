@@ -109,4 +109,5 @@ std::istream& operator>>(std::istream& input, RankTwoTensor& tensor) {	// inputs
 		}
 	}
 	return input;
+	std::cin.clear();
 }	
