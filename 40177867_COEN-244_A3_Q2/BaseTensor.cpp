@@ -1,6 +1,6 @@
 #include "BaseTensor.h"
 
-// Methods
+// Methodes
 
 double BaseTensor::valueGen() {
 	std::random_device rd;

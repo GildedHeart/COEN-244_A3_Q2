@@ -17,7 +17,7 @@ public:
     RankTwoTensor(const RankTwoTensor& other);
     virtual ~RankTwoTensor() override;
 
-    // Methods
+    // Methodes
 
     virtual void loadData() override;
 

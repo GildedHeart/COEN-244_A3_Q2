@@ -12,7 +12,7 @@ RankOneTensor::RankOneTensor(const RankOneTensor& other) : data(other.data) {}
 
 RankOneTensor::~RankOneTensor() {}
 
-// Methods
+// Methodes
 
 void RankOneTensor::loadData() {
 	for (size_t i = 0; i < data.size(); i++) {

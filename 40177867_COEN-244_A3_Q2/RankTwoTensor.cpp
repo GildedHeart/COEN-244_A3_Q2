@@ -14,7 +14,7 @@ RankTwoTensor::RankTwoTensor(const RankTwoTensor& other) : data(other.data){}
 
 RankTwoTensor::~RankTwoTensor() {}
 
-// Methods
+// Methodes
 
 void RankTwoTensor::loadData() {
 		for (size_t i = 0; i < data.size(); i++) {
